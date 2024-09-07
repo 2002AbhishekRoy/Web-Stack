@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Game Store</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: black;
+            z-index: 1000; /* Ensure it stays on top of other elements */
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        header {
+            background: url('carousel2.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            margin-top: 60px; /* Space for fixed nav */
+        }
+
+        .hero {
+            padding: 50px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff4500;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .btn:hover {
+            background: #ff6347;
+        }
+
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-images img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-control button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+
+        .carousel-control button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Featured Games & Promotions Styles */
+        .featured, .promotions {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .game-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .game {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .game img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .promotion {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .promotion img {
+            border-radius: 10px;
+        }
+
+        .promotion-text {
+            max-width: 300px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-media {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .social-media li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">GameStore</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#featured">Featured Games</a></li>
+            <li><a href="#promotions">Promotions</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="hero">
+            <img class="fit">
+            <h1>Welcome to GameStore</h1>
+            <p>Your one-stop shop for the latest and greatest games.</p>
+            <a href="#featured" class="btn">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- Carousel Section -->
+    <section class="carousel">
+        <div class="carousel-images">
+            <img src="carousel.jpg" alt="Featured Game 1">
+            <img src="#" alt="Featured Game 2">
+            <img src="https://via.placeholder.com/1200x400" alt="Featured Game 3">
+        </div>
+        <div class="carousel-control">
+            <button class="left">&lt;</button>
+            <button class="right">&gt;</button>
+        </div>
+    </section>
+
+    <!-- Featured Games Section -->
+    <section id="featured" class="featured">
+        <h2>Featured Games</h2>
+        <div class="game-container">
+            <!-- Example game entries -->
+            <div class="game">
+                <img src="https://via.placeholder.com/150" alt="Game 1">
+                <h3>Game Title 1</h3>
+                <p>Genre: Action</p>
+                <p>$49.99</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="game">
+                <img src="https://via.placeholder.com/150" alt="Game 2">
+                <h3>Game Title 2</h3>
+                <p>Genre: Adventure</p>
+                <p>$39.99</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <!-- Add more game entries as needed -->
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section id="promotions" class="promotions">
+        <h2>Current Promotions</h2>
+        <div class="promotion">
+            <img src="https://via.placeholder.com/300x150" alt="Promotion 1">
+            <div class="promotion-text">
+                <h3>Summer Sale</h3>
+                <p>Get up to 50% off on selected games!</p>
+            </div>
+        </div>
+        <!-- Add more promotions as needed -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries, please email us at <a href="mailto:support@gamestore.com">support@gamestore.com</a></p>
+        <p>Follow us on social media:</p>
+        <ul class="social-media">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+        <p>&copy; 2024 GameStore. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Carousel script
+            const carouselImages = document.querySelector('.carousel-images');
+            const images = document.querySelectorAll('.carousel-images img');
+            let index = 0;
+
+            function showImage(n) {
+                if (n >= images.length) index = 0;
+                else if (n < 0) index = images.length - 1;
+                carouselImages.style.transform = `translateX(${-index * 100}%)`;
+            }
+
+            document.querySelector('.carousel-control.left').addEventListener('click', () => {
+                showImage(index - 1);
+            });
+
+            document.querySelector('.carousel-control.right').addEventListener('click', () => {
+                showImage(index + 1);
+            });
+
+            // Auto-slide images
+            setInterval(() => {
+                showImage(index + 1);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

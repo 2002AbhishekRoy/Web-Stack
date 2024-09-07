@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="Login.css">
+        <link rel="stylesheet" href="Login.js">
+    </head>
+    <body>
+        <div class="box">
+            <h1>Log In</h1><br><br>
+            <form onsubmit="return validateForm()" action="Navbar.html">
+                <div class="p1">
+                    <input type="text" id="username" placeholder="Username">
+                    <i class='bx bxs-user'></i>
+                    <div id="username-error" class="error-message"></div>
+                </div>
+                
+                <div class="p1">
+                    <input type="password" id="password" placeholder="Password">
+                    <i class='bx bxs-lock-alt'></i>
+                    <div id="password-error" class="error-message"></div>
+                </div>
+                <button type="submit">Login</button><br><br>
+                <a href="Forgot Password.html" style="color: white;text-decoration: none;float: right;"> Forgot Password </a>
+            </form>
+        </div>
+    </body>
+</html>
